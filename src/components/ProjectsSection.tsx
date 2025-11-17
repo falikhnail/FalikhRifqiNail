@@ -27,64 +27,54 @@ export default function ProjectsSection({ language }: ProjectsSectionProps) {
 
   const projects = [
     {
-      title: language === 'en' ? 'E-Commerce Platform' : 'Platform E-Commerce',
+      title: language === 'en' ? 'Master Music Management System' : 'Sistem Master Music Managemen',
       description: language === 'en' 
-        ? 'A full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.'
-        : 'Platform e-commerce lengkap dengan integrasi pembayaran, manajemen inventori, dan dashboard admin.',
-      image: '/assets/projects/project1.jpg',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      liveUrl: '#',
+        ? 'Platform for managing artists, events, and music catalogs with a clean and modern dashboard interface.'
+        : 'Platform untuk mengelola artis, event, dan katalog musik dengan tampilan dashboard yang modern dan mudah digunakan.',
+      image: '/assets/projects/mastermusic.webp',
+      tags: ['Laravel', 'PHP', 'Cpanel', 'JavaScript'],
+      liveUrl: 'https://mastermusic.co.id/',
       githubUrl: '#',
     },
     {
-      title: language === 'en' ? 'Task Management App' : 'Aplikasi Manajemen Tugas',
+      title: language === 'en' ? 'SIMAS INTEL System' : 'Sistem SIMAS INTEL',
       description: language === 'en'
-        ? 'Collaborative task management tool with real-time updates, team collaboration, and progress tracking.'
-        : 'Tool manajemen tugas kolaboratif dengan update real-time, kolaborasi tim, dan tracking progress.',
-      image: '/assets/projects/project2.jpg',
-      tags: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      liveUrl: '#',
+        ? 'Platform for internal data management and monitoring with a modern, responsive interface delivering fast and accessible information.'
+        : 'Platform untuk manajemen dan monitoring data internal dengan antarmuka modern, responsif, cepat, serta mudah diakses pengguna.',
+      image: '/assets/projects/keja.webp',
+      tags: ['Next.js', 'TypeScript', 'Cpanel', 'CSS', 'JavaScript'],
+      liveUrl: 'https://simas-intel.knkudus.com/',
       githubUrl: '#',
     },
     {
-      title: language === 'en' ? 'Social Media Dashboard' : 'Dashboard Media Sosial',
+      title: language === 'en' ? 'Portfolio & Online Registration' : 'Portofolio & Online Registration',
       description: language === 'en'
-        ? 'Analytics dashboard for social media metrics with beautiful data visualizations and insights.'
-        : 'Dashboard analytics untuk metrik media sosial dengan visualisasi data yang indah dan insights.',
-      image: '/assets/projects/project3.jpg',
-      tags: ['Next.js', 'TypeScript', 'Chart.js', 'API'],
-      liveUrl: '#',
+        ? 'The official hospital site showcasing services, doctors, facilities, profiles, and fast, efficient online patient registration.'
+        : 'Situs resmi RSIA yang menampilkan layanan, dokter, fasilitas, profil, dan pendaftaran pasien online cepat efisien.',
+      image: '/assets/projects/mir.webp',
+      tags: ['Laravel', 'Blade', 'Cpanel', 'CSS','JavaScript'],
+      liveUrl: 'https://rsiamiriam.com/',
+      githubUrl: 'https://github.com/falikhnail/miriam-web',
+    },
+    {
+      title: language === 'en' ? 'Miriam Attendance' : 'Miriam Presensi',
+      description: language === 'en'
+        ? 'Real-time employee attendance system offering verification, auto logs, and daily activity tracking for improved workplace efficiency.'
+        : 'Sistem absensi karyawan real-time dengan verifikasi, rekapan otomatis, dan pemantauan aktivitas harian agar operasional lebih efisien.',
+      image: '/assets/projects/presensi.webp',
+      tags: ['Laravel', 'Blade', 'Cpanel', 'CSS', 'JavaScript'],
+      liveUrl: 'https://e-presensi.rsiamiriam.com/',
       githubUrl: '#',
     },
     {
-      title: language === 'en' ? 'Portfolio Website Builder' : 'Builder Website Portfolio',
+      title: language === 'en' ? 'Digital Wedding Invitation' : 'Undangan Digital',
       description: language === 'en'
-        ? 'Drag-and-drop portfolio builder with customizable templates and one-click deployment.'
-        : 'Builder portfolio drag-and-drop dengan template yang dapat disesuaikan dan deployment satu klik.',
-      image: '/assets/projects/project4.jpg',
-      tags: ['React', 'DnD Kit', 'Vercel', 'CMS'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: language === 'en' ? 'Fitness Tracking App' : 'Aplikasi Tracking Fitness',
-      description: language === 'en'
-        ? 'Mobile-first fitness app with workout plans, progress tracking, and nutrition guidance.'
-        : 'Aplikasi fitness mobile-first dengan rencana workout, tracking progress, dan panduan nutrisi.',
-      image: '/assets/projects/project5.jpg',
-      tags: ['React Native', 'MongoDB', 'Express', 'Redux'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: language === 'en' ? 'AI Content Generator' : 'Generator Konten AI',
-      description: language === 'en'
-        ? 'AI-powered content generation tool for blogs, social media, and marketing copy.'
-        : 'Tool generator konten bertenaga AI untuk blog, media sosial, dan copy marketing.',
-      image: '/assets/projects/project6.jpg',
-      tags: ['Python', 'OpenAI', 'FastAPI', 'React'],
-      liveUrl: '#',
-      githubUrl: '#',
+        ? 'Interactive, modern online wedding site, easy to share with guests, including event details and RSVP.'
+        : 'Website pernikahan online interaktif, modern, mudah dibagikan, menampilkan detail acara, tamu, dan RSVP',
+      image: '/assets/projects/Weding.webp',
+      tags: ['Java Script', 'API', 'HTML', 'Vercel', 'CSS'],
+      liveUrl: 'https://undangan-pernikahan-falikh-ghina.vercel.app/',
+      githubUrl: 'https://github.com/falikhnail/undangan-digital-with-RestFullApi',
     },
   ];
 

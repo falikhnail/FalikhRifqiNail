@@ -36,7 +36,7 @@ export default function Footer({ language }: FooterProps) {
               Falikh Rifqi Nail
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Full-Stack Developer & UI/UX Designer
+              Web Developer & IT Specialist
             </p>
           </div>
 

@@ -18,49 +18,51 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    slug: "future-of-web-development",
-    title: "The Future of Web Development",
-    titleId: "Masa Depan Pengembangan Web",
-    excerpt: "Exploring upcoming trends and technologies that will shape the future of web development in the next decade.",
-    excerptId: "Menjelajahi tren dan teknologi mendatang yang akan membentuk masa depan pengembangan web dalam dekade berikutnya.",
+    slug: "The-Evolution-of-Cybersecurity-in-the-Digital-Era",
+    title: "The Evolution of Cybersecurity in the Digital Era",
+    titleId: "Evolusi Cybersecurity di Era Digital",
+    excerpt: "Cybersecurity is becoming increasingly complex in a connected world. Learn how modern strategies, AI, and user awareness are shaping the future of cybersecurity.",
+    excerptId: "Keamanan siber semakin kompleks di dunia yang terhubung. Pelajari bagaimana strategi modern, AI, dan kesadaran pengguna membentuk masa depan cybersecurity.",
     content: `
-      <p>The landscape of web development is constantly evolving, with new technologies and frameworks emerging at a rapid pace. As we look toward the future, several key trends are poised to revolutionize how we build and interact with web applications.</p>
-      
-      <h2>Artificial Intelligence Integration</h2>
-      <p>AI is no longer just a buzzword—it's becoming an integral part of modern web development. From intelligent chatbots to personalized user experiences, AI-powered features are enhancing how users interact with websites. Machine learning algorithms can now predict user behavior, optimize content delivery, and even assist in code generation.</p>
-      
-      <h2>Progressive Web Apps (PWAs)</h2>
-      <p>Progressive Web Apps continue to blur the line between web and native applications. With improved offline capabilities, push notifications, and near-native performance, PWAs offer the best of both worlds. Companies are increasingly adopting PWAs to provide seamless experiences across all devices without the need for separate native apps.</p>
-      
-      <h2>WebAssembly and Performance</h2>
-      <p>WebAssembly (Wasm) is opening new possibilities for web applications by allowing developers to run high-performance code in the browser. This technology enables complex applications like video editors, 3D games, and scientific simulations to run directly in web browsers with near-native speed.</p>
-      
-      <h2>The Rise of Edge Computing</h2>
-      <p>Edge computing is transforming how we think about web infrastructure. By processing data closer to the user, edge computing reduces latency and improves performance. This is particularly important for real-time applications and IoT devices.</p>
-      
-      <p>As developers, staying ahead of these trends is crucial. The future of web development is exciting, and those who embrace these technologies will be well-positioned to build the next generation of web applications.</p>
+    <p>The Evolution of Cybersecurity in the Digital Era</p>
+    <p>Cybersecurity has become a top priority in an increasingly connected world. Cyber attacks are growing more sophisticated, requiring adaptive strategies to keep data and systems secure.</p>
+
+    <h2>Artificial Intelligence Integration</h2>
+    <p>AI is no longer just a buzzword—it's becoming an integral part of modern web development. From intelligent chatbots to personalized user experiences, AI-powered features are enhancing how users interact with websites. Machine learning algorithms can now predict user behavior, optimize content delivery, and even assist in code generation.</p>
+
+    <h2>Progressive Web Apps (PWAs)</h2>
+    <p>Progressive Web Apps continue to blur the line between web and native applications. With improved offline capabilities, push notifications, and near-native performance, PWAs offer the best of both worlds. Companies are increasingly adopting PWAs to provide seamless experiences across all devices without the need for separate native apps.</p>
+
+    <h2>WebAssembly and Performance</h2>
+    <p>WebAssembly (Wasm) is opening new possibilities for web applications by allowing developers to run high-performance code in the browser. This technology enables complex applications like video editors, 3D games, and scientific simulations to run directly in web browsers with near-native speed.</p>
+
+    <h2>The Rise of Edge Computing</h2>
+    <p>Edge computing is transforming how we think about web infrastructure. By processing data closer to the user, edge computing reduces latency and improves performance. This is particularly important for real-time applications and IoT devices.</p>
+
+    <p>As developers, staying ahead of these trends is crucial. The future of web development is exciting, and those who embrace these technologies will be well-positioned to build the next generation of web applications.</p>
     `,
     contentId: `
-      <p>Lanskap pengembangan web terus berkembang, dengan teknologi dan framework baru yang muncul dengan cepat. Saat kita melihat ke masa depan, beberapa tren kunci siap merevolusi cara kita membangun dan berinteraksi dengan aplikasi web.</p>
-      
-      <h2>Integrasi Kecerdasan Buatan</h2>
-      <p>AI bukan lagi sekadar kata kunci—ini menjadi bagian integral dari pengembangan web modern. Dari chatbot cerdas hingga pengalaman pengguna yang dipersonalisasi, fitur bertenaga AI meningkatkan cara pengguna berinteraksi dengan situs web. Algoritma pembelajaran mesin sekarang dapat memprediksi perilaku pengguna, mengoptimalkan pengiriman konten, dan bahkan membantu dalam pembuatan kode.</p>
-      
-      <h2>Progressive Web Apps (PWA)</h2>
-      <p>Progressive Web Apps terus mengaburkan batas antara aplikasi web dan native. Dengan kemampuan offline yang ditingkatkan, notifikasi push, dan performa mendekati native, PWA menawarkan yang terbaik dari kedua dunia. Perusahaan semakin banyak mengadopsi PWA untuk memberikan pengalaman mulus di semua perangkat tanpa perlu aplikasi native terpisah.</p>
-      
-      <h2>WebAssembly dan Performa</h2>
-      <p>WebAssembly (Wasm) membuka kemungkinan baru untuk aplikasi web dengan memungkinkan pengembang menjalankan kode berkinerja tinggi di browser. Teknologi ini memungkinkan aplikasi kompleks seperti editor video, game 3D, dan simulasi ilmiah berjalan langsung di browser web dengan kecepatan mendekati native.</p>
-      
-      <h2>Kebangkitan Edge Computing</h2>
-      <p>Edge computing mengubah cara kita berpikir tentang infrastruktur web. Dengan memproses data lebih dekat ke pengguna, edge computing mengurangi latensi dan meningkatkan performa. Ini sangat penting untuk aplikasi real-time dan perangkat IoT.</p>
-      
-      <p>Sebagai pengembang, tetap unggul dalam tren ini sangat penting. Masa depan pengembangan web sangat menarik, dan mereka yang merangkul teknologi ini akan berada dalam posisi yang baik untuk membangun generasi aplikasi web berikutnya.</p>
+    <p>Evolusi Keamanan Siber di Era Digital</p>
+    <p>Keamanan siber menjadi prioritas utama di dunia yang semakin terhubung. Serangan siber semakin canggih, sehingga strategi adaptif diperlukan untuk menjaga data dan sistem tetap aman.</p>
+
+    <h2>Integrasi Kecerdasan Buatan</h2>
+    <p>AI kini bukan sekadar istilah populer—melainkan bagian penting dari pengembangan web modern. Mulai dari chatbot cerdas hingga pengalaman pengguna yang dipersonalisasi, fitur berbasis AI meningkatkan interaksi pengguna dengan website. Algoritma machine learning kini dapat memprediksi perilaku pengguna, mengoptimalkan penyampaian konten, bahkan membantu dalam pembuatan kode.</p>
+
+    <h2>Progressive Web Apps (PWAs)</h2>
+    <p>Progressive Web Apps terus mempersatukan pengalaman antara aplikasi web dan aplikasi native. Dengan kemampuan offline yang lebih baik, notifikasi push, dan performa hampir setara native, PWAs menawarkan yang terbaik dari kedua dunia. Perusahaan semakin banyak mengadopsi PWAs untuk memberikan pengalaman mulus di semua perangkat tanpa perlu membuat aplikasi native terpisah.</p>
+
+    <h2>WebAssembly dan Performa</h2>
+    <p>WebAssembly (Wasm) membuka kemungkinan baru bagi aplikasi web dengan memungkinkan pengembang menjalankan kode berkinerja tinggi langsung di browser. Teknologi ini memungkinkan aplikasi kompleks seperti editor video, game 3D, dan simulasi ilmiah berjalan langsung di browser dengan kecepatan mendekati native.</p>
+
+    <h2>Kebangkitan Edge Computing</h2>
+    <p>Edge computing mengubah cara kita memandang infrastruktur web. Dengan memproses data lebih dekat ke pengguna, edge computing mengurangi latensi dan meningkatkan performa. Hal ini sangat penting untuk aplikasi real-time dan perangkat IoT.</p>
+
+    <p>Sebagai pengembang, tetap mengikuti tren ini sangat penting. Masa depan pengembangan web sangat menjanjikan, dan mereka yang memanfaatkan teknologi ini akan siap membangun generasi berikutnya dari aplikasi web.</p>
     `,
-    image: "/images/blog1.jpg",
-    category: "Technology",
-    categoryId: "Teknologi",
-    date: "2024-01-15",
+    image: "assets/images/cyber.png",
+    category: "Security",
+    categoryId: "Keamanan",
+    date: "2025-11-17",
     readTime: "5 min read",
     readTimeId: "5 menit baca"
   },
@@ -111,12 +113,12 @@ export const blogPosts: BlogPost[] = [
       
       <p>Dengan menerapkan prinsip-prinsip ini secara konsisten, Anda dapat membuat antarmuka yang tidak hanya indah tetapi juga fungsional, dapat diakses, dan ramah pengguna.</p>
     `,
-    image: "/images/Design.jpg",
-    category: "Design",
-    categoryId: "Desain",
-    date: "2024-01-10",
-    readTime: "4 min read",
-    readTimeId: "4 menit baca"
+    image: "images/cyber.png",
+    category: "Security",
+    categoryId: "Keamanan",
+    date: "2025-11-17",
+    readTime: "5 min read",
+    readTimeId: "5 menit baca"
   },
   {
     id: "3",

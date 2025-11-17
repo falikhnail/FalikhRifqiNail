@@ -11,8 +11,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
     en: {
       greeting: 'Hi, I\'m',
       name: 'Falikh Rifqi Nail',
-      title: 'Full-Stack Developer & UI/UX Designer',
-      description: 'I create beautiful, functional, and user-centered digital experiences. Specialized in modern web technologies and innovative solutions.',
+      title: 'Web Developer & IT Specialist',
+      description: 'I build fast, secure, and modern websites using Laravel, CodeIgniter, and React. I have experience in system development, IT infrastructure management, and delivering technology solutions for businesses.',
       cta: 'View My Work',
       downloadCV: 'Download CV',
       watchVideo: 'Watch Introduction',
@@ -20,8 +20,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
     id: {
       greeting: 'Hai, Saya',
       name: 'Falikh Rifqi Nail',
-      title: 'Full-Stack Developer & UI/UX Designer',
-      description: 'Saya menciptakan pengalaman digital yang indah, fungsional, dan berpusat pada pengguna. Spesialisasi dalam teknologi web modern dan solusi inovatif.',
+      title: 'Web Developer & IT Specialist',
+      description: 'Saya membangun website yang cepat, aman, dan modern menggunakan Laravel, CodeIgniter, dan React. Berpengalaman dalam pengembangan sistem, manajemen infrastruktur IT, dan solusi teknologi untuk bisnis',
       cta: 'Lihat Karya Saya',
       downloadCV: 'Unduh CV',
       watchVideo: 'Tonton Perkenalan',
@@ -32,8 +32,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/cv-falikh-rifqi-nail.pdf';
-    link.download = 'CV-Falikh-Rifqi-Nail.pdf';
+    link.href = 'assets/cv.pdf';
+    link.download = 'CV-FALIKH-RIFQI-NAIL.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -109,7 +109,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
                 <img
-                  src="/assets/profile_variant_1.jpg"
+                  src="/assets/falikh.png"
                   alt="Falikh Rifqi Nail"
                   className="relative w-64 h-64 rounded-full border-4 border-white dark:border-slate-800 shadow-2xl object-cover"
                 />

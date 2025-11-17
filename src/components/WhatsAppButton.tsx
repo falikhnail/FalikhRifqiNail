@@ -7,7 +7,7 @@ interface WhatsAppButtonProps {
 
 export default function WhatsAppButton({ language }: WhatsAppButtonProps) {
   // Get WhatsApp number from environment variables
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6281234567890';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '6285156796373';
   
   const messages = {
     en: 'Hello! I am interested in discussing a project with you.',

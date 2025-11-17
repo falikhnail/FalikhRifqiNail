@@ -279,7 +279,7 @@ export default function ContactSection({ language }: ContactSectionProps) {
                     <h3 className="font-semibold text-gray-800 dark:text-gray-100 mb-1">
                       {t.phoneLabel}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400">+62 812-3456-7890</p>
+                    <p className="text-gray-600 dark:text-gray-400">+62 851-5679-6373</p>
                   </div>
                 </div>
 
@@ -292,7 +292,7 @@ export default function ContactSection({ language }: ContactSectionProps) {
                       {t.locationLabel}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      {language === 'en' ? 'Jakarta, Indonesia' : 'Jakarta, Indonesia'}
+                      {language === 'en' ? 'Kudus, Indonesia' : 'Kudus, Indonesia'}
                     </p>
                   </div>
                 </div>
