@@ -1,131 +1,55 @@
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
-
-interface BlogPost {
-  id: number;
-  title: string;
-  titleId: string;
-  excerpt: string;
-  excerptId: string;
-  date: string;
-  readTime: string;
-  category: string;
-  categoryId: string;
-  thumbnail: string;
-  slug: string;
-}
+import { Calendar, Clock, ArrowRight, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { blogPosts } from '@/data/blogData';
 
 interface BlogSectionProps {
   language: 'en' | 'id';
 }
 
 export default function BlogSection({ language }: BlogSectionProps) {
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: 'Building Scalable Web Applications with React',
-      titleId: 'Membangun Aplikasi Web Scalable dengan React',
-      excerpt: 'Learn best practices for creating maintainable and scalable React applications that can grow with your business needs.',
-      excerptId: 'Pelajari praktik terbaik untuk membuat aplikasi React yang maintainable dan scalable yang dapat berkembang sesuai kebutuhan bisnis Anda.',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'Web Development',
-      categoryId: 'Pengembangan Web',
-      thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
-      slug: 'building-scalable-web-applications',
-    },
-    {
-      id: 2,
-      title: 'Modern UI/UX Design Principles',
-      titleId: 'Prinsip Desain UI/UX Modern',
-      excerpt: 'Explore the latest trends in user interface and user experience design that make applications intuitive and beautiful.',
-      excerptId: 'Jelajahi tren terbaru dalam desain antarmuka pengguna dan pengalaman pengguna yang membuat aplikasi intuitif dan indah.',
-      date: '2024-01-10',
-      readTime: '7 min read',
-      category: 'Design',
-      categoryId: 'Desain',
-      thumbnail: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop',
-      slug: 'modern-ui-ux-design-principles',
-    },
-    {
-      id: 3,
-      title: 'TypeScript Best Practices for Large Projects',
-      titleId: 'Praktik Terbaik TypeScript untuk Proyek Besar',
-      excerpt: 'Discover how to leverage TypeScript features to write safer, more maintainable code in enterprise applications.',
-      excerptId: 'Temukan cara memanfaatkan fitur TypeScript untuk menulis kode yang lebih aman dan maintainable dalam aplikasi enterprise.',
-      date: '2024-01-05',
-      readTime: '6 min read',
-      category: 'Programming',
-      categoryId: 'Pemrograman',
-      thumbnail: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=400&fit=crop',
-      slug: 'typescript-best-practices',
-    },
-    {
-      id: 4,
-      title: 'Optimizing Web Performance',
-      titleId: 'Mengoptimalkan Performa Web',
-      excerpt: 'Learn techniques to improve your website loading speed and overall performance for better user experience.',
-      excerptId: 'Pelajari teknik untuk meningkatkan kecepatan loading website dan performa keseluruhan untuk pengalaman pengguna yang lebih baik.',
-      date: '2023-12-28',
-      readTime: '8 min read',
-      category: 'Performance',
-      categoryId: 'Performa',
-      thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
-      slug: 'optimizing-web-performance',
-    },
-    {
-      id: 5,
-      title: 'Introduction to Cloud Architecture',
-      titleId: 'Pengenalan Arsitektur Cloud',
-      excerpt: 'Understanding cloud computing fundamentals and how to design scalable cloud-based solutions.',
-      excerptId: 'Memahami fundamental cloud computing dan cara mendesain solusi berbasis cloud yang scalable.',
-      date: '2023-12-20',
-      readTime: '10 min read',
-      category: 'Cloud Computing',
-      categoryId: 'Komputasi Cloud',
-      thumbnail: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop',
-      slug: 'introduction-to-cloud-architecture',
-    },
-    {
-      id: 6,
-      title: 'Responsive Design Techniques',
-      titleId: 'Teknik Desain Responsif',
-      excerpt: 'Master the art of creating websites that look great on all devices, from mobile to desktop.',
-      excerptId: 'Kuasai seni membuat website yang terlihat bagus di semua perangkat, dari mobile hingga desktop.',
-      date: '2023-12-15',
-      readTime: '5 min read',
-      category: 'Web Design',
-      categoryId: 'Desain Web',
-      thumbnail: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=400&fit=crop',
-      slug: 'responsive-design-techniques',
-    },
-  ];
-
   const texts = {
     en: {
-      heading: 'Latest Blog Posts',
-      subheading: 'Insights, tutorials, and thoughts on web development',
-      readMore: 'Read More',
+      heading: 'Latest Insights',
+      subheading: 'Discover articles about web development, design, and technology',
+      readMore: 'Read Article',
+      featured: 'Featured',
     },
     id: {
-      heading: 'Artikel Blog Terbaru',
-      subheading: 'Wawasan, tutorial, dan pemikiran tentang pengembangan web',
-      readMore: 'Baca Selengkapnya',
+      heading: 'Wawasan Terbaru',
+      subheading: 'Temukan artikel tentang pengembangan web, desain, dan teknologi',
+      readMore: 'Baca Artikel',
+      featured: 'Unggulan',
     },
   };
 
   const t = texts[language];
 
+  // Split posts into featured and regular
+  const featuredPost = blogPosts[0];
+  const regularPosts = blogPosts.slice(1);
+
   return (
     <section 
-      className="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300"
+      className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 transition-colors duration-300 relative overflow-hidden"
       aria-labelledby="blog-heading"
     >
-      <div className="container mx-auto px-6">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 dark:bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Header */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <h2 id="blog-heading" className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 mb-4">
+            <TrendingUp className="w-4 h-4" />
+            <span className="text-sm font-semibold">Blog</span>
+          </div>
+          <h2 id="blog-heading" className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
             {t.heading}
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
@@ -133,60 +57,119 @@ export default function BlogSection({ language }: BlogSectionProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <Card
-              key={post.id}
-              className="group overflow-hidden border-2 border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 dark:bg-slate-800"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardHeader className="p-0">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={post.thumbnail}
-                    alt={language === 'en' ? post.title : post.titleId}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <Badge className="absolute top-4 right-4 bg-purple-600 hover:bg-purple-700">
-                    {language === 'en' ? post.category : post.categoryId}
+        {/* Featured Post */}
+        <Link to={`/blog/${featuredPost.slug}`} className="block mb-12">
+          <Card className="group relative overflow-hidden border-0 shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/10 transition-all duration-500 animate-in fade-in slide-in-from-bottom-6 duration-700 bg-gradient-to-br from-white to-purple-50/30 dark:from-slate-800 dark:to-purple-900/10">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Image Section */}
+              <div className="relative h-64 md:h-full overflow-hidden">
+                <div className="absolute top-4 left-4 z-10">
+                  <Badge className="bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0 shadow-lg backdrop-blur-sm">
+                    <TrendingUp className="w-3 h-3 mr-1" />
+                    {t.featured}
                   </Badge>
                 </div>
-              </CardHeader>
+                <img
+                  src={featuredPost.image}
+                  alt={language === 'en' ? featuredPost.title : featuredPost.titleId}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+              </div>
 
-              <CardContent className="p-6 space-y-3">
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 line-clamp-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
-                  {language === 'en' ? post.title : post.titleId}
+              {/* Content Section */}
+              <CardContent className="p-8 md:p-12 flex flex-col justify-center">
+                <Badge className="w-fit mb-4 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-900/50 border-0">
+                  {language === 'en' ? featuredPost.category : featuredPost.categoryId}
+                </Badge>
+
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 group-hover:bg-clip-text transition-all duration-300">
+                  {language === 'en' ? featuredPost.title : featuredPost.titleId}
                 </h3>
 
-                <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-                  <div className="flex items-center gap-1">
+                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6 line-clamp-3 leading-relaxed">
+                  {language === 'en' ? featuredPost.excerpt : featuredPost.excerptId}
+                </p>
+
+                <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400 mb-6">
+                  <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.date).toLocaleDateString(language === 'en' ? 'en-US' : 'id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                    <span>{new Date(featuredPost.date).toLocaleDateString(language === 'en' ? 'en-US' : 'id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                   </div>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
-                    <span>{post.readTime}</span>
+                    <span>{featuredPost.readTime}</span>
                   </div>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-400 line-clamp-3">
-                  {language === 'en' ? post.excerpt : post.excerptId}
-                </p>
-              </CardContent>
-
-              <CardFooter className="p-6 pt-0">
                 <Button 
-                  variant="ghost" 
-                  className="w-full group/btn hover:bg-purple-50 dark:hover:bg-purple-900/20"
-                  aria-label={`${t.readMore}: ${language === 'en' ? post.title : post.titleId}`}
+                  className="w-fit group/btn bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
+                  size="lg"
                 >
                   <span>{t.readMore}</span>
-                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover/btn:translate-x-2 transition-transform duration-300" />
                 </Button>
-              </CardFooter>
-            </Card>
+              </CardContent>
+            </div>
+          </Card>
+        </Link>
+
+        {/* Regular Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {regularPosts.map((post, index) => (
+            <Link key={post.id} to={`/blog/${post.slug}`} className="block group">
+              <Card
+                className="h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-purple-500/10 dark:hover:shadow-purple-500/5 transition-all duration-500 animate-in fade-in slide-in-from-bottom-6 duration-700 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm hover:-translate-y-2"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              >
+                <CardHeader className="p-0 relative">
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={language === 'en' ? post.title : post.titleId}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <Badge className="absolute top-4 right-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm text-gray-900 dark:text-gray-100 border-0 shadow-lg">
+                      {language === 'en' ? post.category : post.categoryId}
+                    </Badge>
+                  </div>
+                </CardHeader>
+
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 line-clamp-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 group-hover:bg-clip-text transition-all duration-300 leading-tight">
+                    {language === 'en' ? post.title : post.titleId}
+                  </h3>
+
+                  <p className="text-gray-600 dark:text-gray-400 line-clamp-3 text-sm leading-relaxed">
+                    {language === 'en' ? post.excerpt : post.excerptId}
+                  </p>
+
+                  <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400 pt-2">
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{new Date(post.date).toLocaleDateString(language === 'en' ? 'en-US' : 'id-ID', { month: 'short', day: 'numeric' })}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </CardContent>
+
+                <CardFooter className="p-6 pt-0">
+                  <Button 
+                    variant="ghost" 
+                    className="w-full group/btn hover:bg-gradient-to-r hover:from-purple-50 hover:to-blue-50 dark:hover:from-purple-900/20 dark:hover:to-blue-900/20 text-purple-600 dark:text-purple-400 font-semibold"
+                  >
+                    <span>{t.readMore}</span>
+                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover/btn:translate-x-2 transition-transform duration-300" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
