@@ -1,0 +1,26 @@
+Anda perlu menyiapkan gambar-gambar berikut dan meletakkannya di folder yang sesuai:
+
+Foto Profil:
+
+public/assets/profile.jpg - Foto profil utama (ukuran: 500x500px)
+public/assets/profile_variant_1.jpg - Foto profil alternatif (ukuran: 500x500px)
+Proyek (6 gambar):
+
+public/assets/projects/project1.jpg - Screenshot proyek 1 (ukuran: 800x600px)
+public/assets/projects/project2.jpg - Screenshot proyek 2
+public/assets/projects/project3.jpg - Screenshot proyek 3
+public/assets/projects/project4.jpg - Screenshot proyek 4
+public/assets/projects/project5.jpg - Screenshot proyek 5
+public/assets/projects/project6.jpg - Screenshot proyek 6
+Testimonial (4 gambar):
+
+public/assets/testimonials/client1.jpg - Foto klien 1 (ukuran: 200x200px)
+public/assets/testimonials/client2.jpg - Foto klien 2
+public/assets/testimonials/client3.jpg - Foto klien 3
+public/assets/testimonials/client4.jpg - Foto klien 4
+Partner/Klien (4 gambar):
+
+public/assets/partners/partner1.jpg - Logo partner 1 (ukuran: 300x300px)
+public/assets/partners/partner2.jpg - Logo partner 2
+public/assets/partners/partner3.png - Logo partner 3
+public/assets/partners/partner4.png - Logo partner 4
