@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>Sebagai pengembang, tetap mengikuti tren ini sangat penting. Masa depan pengembangan web sangat menjanjikan, dan mereka yang memanfaatkan teknologi ini akan siap membangun generasi berikutnya dari aplikasi web.</p>
     `,
-    image: "assets/images/cyber.png",
+    image: "/assets/images/cyber.png",
     category: "Security",
     categoryId: "Keamanan",
     date: "2025-11-17",
@@ -68,115 +68,251 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "2",
-    slug: "design-principles-modern-ui",
-    title: "Design Principles for Modern UI",
-    titleId: "Prinsip Desain untuk UI Modern",
-    excerpt: "Learn the fundamental principles that make user interfaces intuitive, accessible, and visually appealing.",
+    slug: "Build-a-Simple-Portfolio-Website-with-React-&-Tailwind",
+    title: "Build a Simple Portfolio Website with React & Tailwind",
+    titleId: "Membuat Website Portofolio Sederhana dengan React & Tailwind",
+    excerpt: "This tutorial guides you to create a simple portfolio website using React and Tailwind CSS. The site is responsive and easy to expand, featuring projects, skills, and contact information.",
     excerptId: "Pelajari prinsip-prinsip fundamental yang membuat antarmuka pengguna intuitif, mudah diakses, dan menarik secara visual.",
     content: `
-      <p>Creating exceptional user interfaces requires more than just aesthetic appeal—it demands a deep understanding of design principles that prioritize user experience and accessibility. Let's explore the core principles that define modern UI design.</p>
-      
-      <h2>Consistency is Key</h2>
-      <p>Consistency in design creates familiarity and reduces cognitive load. Users should be able to predict how elements will behave based on their previous interactions. This includes consistent use of colors, typography, spacing, and interactive elements throughout your application.</p>
-      
-      <h2>Visual Hierarchy</h2>
-      <p>Effective visual hierarchy guides users through your interface naturally. By using size, color, contrast, and spacing strategically, you can direct attention to the most important elements first. This helps users understand the structure and priority of information at a glance.</p>
-      
-      <h2>Accessibility First</h2>
-      <p>Designing for accessibility isn't optional—it's essential. This means ensuring sufficient color contrast, providing alternative text for images, making interactive elements keyboard-accessible, and designing for various screen readers. An accessible design benefits all users, not just those with disabilities.</p>
-      
-      <h2>Responsive and Adaptive</h2>
-      <p>Modern interfaces must work seamlessly across all devices and screen sizes. Responsive design ensures your UI adapts gracefully to different viewports, while adaptive design might serve different layouts based on device capabilities. Both approaches are crucial for reaching today's diverse user base.</p>
-      
-      <h2>Microinteractions Matter</h2>
-      <p>Small details make a big difference. Microinteractions—like button hover states, loading animations, and transition effects—provide feedback and make interfaces feel alive and responsive. These subtle touches enhance user engagement and satisfaction.</p>
-      
-      <p>By applying these principles consistently, you can create interfaces that are not only beautiful but also functional, accessible, and user-friendly.</p>
+<p>Building an effective portfolio website requires more than just showing projects—it also demands understanding structure, responsiveness, and user experience. Let's explore the core steps to create a modern portfolio website using React and Tailwind CSS.</p>
+
+<h2>1. Setting Up the Project</h2>
+<p>Start by creating a React project with Vite. It's fast, lightweight, and provides a solid foundation for your portfolio site.</p>
+<pre><code>npm create vite@latest my-portfolio
+cd my-portfolio
+npm install
+npm run dev</code></pre>
+<p>Open your browser at <code>http://localhost:5173</code> to see the initial project.</p>
+
+<h2>2. Install Tailwind CSS</h2>
+<p>Tailwind CSS makes modern, responsive styling easy. After installation, configure it for React.</p>
+<pre><code>npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p</code></pre>
+<p>Edit <code>tailwind.config.js</code>:</p>
+<pre><code>content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+theme: { extend: {} },
+plugins: [],</code></pre>
+<p>Add to <code>src/index.css</code>:</p>
+<pre><code>@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+
+<h2>3. Create Folder Structure</h2>
+<p>A clear structure makes development easier:</p>
+<pre><code>src/
+  components/
+    Navbar.jsx
+    Footer.jsx
+    ProjectCard.jsx
+  pages/
+    Home.jsx
+  App.jsx</code></pre>
+
+<h2>4. Create Navbar</h2>
+<pre><code>import React from "react";
+
+const Navbar = () => (
+  &lt;nav className="p-5 bg-gray-800 text-white flex justify-between"&gt;
+    &lt;h1 className="font-bold"&gt;Portfolio&lt;/h1&gt;
+    &lt;div className="space-x-4"&gt;
+      &lt;a href="#projects"&gt;Projects&lt;/a&gt;
+      &lt;a href="#skills"&gt;Skills&lt;/a&gt;
+      &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+);
+
+export default Navbar;</code></pre>
+
+<h2>5. Create ProjectCard</h2>
+<pre><code>const ProjectCard = ({ title, description, link }) =&gt; (
+  &lt;div className="border p-4 rounded shadow hover:shadow-lg transition"&gt;
+    &lt;h2 className="font-bold text-lg"&gt;{title}&lt;/h2&gt;
+    &lt;p&gt;{description}&lt;/p&gt;
+    &lt;a href={link} target="_blank" className="text-blue-500"&gt;View Project&lt;/a&gt;
+  &lt;/div&gt;
+);
+
+export default ProjectCard;</code></pre>
+
+<h2>6. Home Page</h2>
+<pre><code>import Navbar from "../components/Navbar";
+import ProjectCard from "../components/ProjectCard";
+
+const projects = [
+  { title: "Online Store Website", description: "React + Tailwind", link: "#" },
+  { title: "Personal Portfolio", description: "React + Tailwind", link: "#" },
+];
+
+const Home = () =&gt; (
+  &lt;div&gt;
+    &lt;Navbar /&gt;
+    &lt;section id="projects" className="p-10 grid grid-cols-1 md:grid-cols-2 gap-6"&gt;
+      {projects.map((p, i) =&gt; &lt;ProjectCard key={i} {...p} /&gt;)}
+    &lt;/section&gt;
+  &lt;/div&gt;
+);
+
+export default Home;</code></pre>
+
+<h2>7. Running the Project</h2>
+<p>After everything is ready, run the project:</p>
+<pre><code>npm run dev</code></pre>
+<p>Your portfolio website is now live at <code>http://localhost:5173</code>.</p>
+
     `,
     contentId: `
-      <p>Menciptakan antarmuka pengguna yang luar biasa memerlukan lebih dari sekadar daya tarik estetika—ini menuntut pemahaman mendalam tentang prinsip desain yang memprioritaskan pengalaman pengguna dan aksesibilitas. Mari kita jelajahi prinsip-prinsip inti yang mendefinisikan desain UI modern.</p>
-      
-      <h2>Konsistensi adalah Kunci</h2>
-      <p>Konsistensi dalam desain menciptakan keakraban dan mengurangi beban kognitif. Pengguna harus dapat memprediksi bagaimana elemen akan berperilaku berdasarkan interaksi mereka sebelumnya. Ini termasuk penggunaan warna, tipografi, spasi, dan elemen interaktif yang konsisten di seluruh aplikasi Anda.</p>
-      
-      <h2>Hierarki Visual</h2>
-      <p>Hierarki visual yang efektif memandu pengguna melalui antarmuka Anda secara alami. Dengan menggunakan ukuran, warna, kontras, dan spasi secara strategis, Anda dapat mengarahkan perhatian ke elemen yang paling penting terlebih dahulu. Ini membantu pengguna memahami struktur dan prioritas informasi sekilas.</p>
-      
-      <h2>Aksesibilitas Pertama</h2>
-      <p>Mendesain untuk aksesibilitas bukan pilihan—ini penting. Ini berarti memastikan kontras warna yang cukup, menyediakan teks alternatif untuk gambar, membuat elemen interaktif dapat diakses dengan keyboard, dan mendesain untuk berbagai pembaca layar. Desain yang dapat diakses menguntungkan semua pengguna, bukan hanya mereka yang memiliki disabilitas.</p>
-      
-      <h2>Responsif dan Adaptif</h2>
-      <p>Antarmuka modern harus bekerja dengan mulus di semua perangkat dan ukuran layar. Desain responsif memastikan UI Anda beradaptasi dengan anggun ke viewport yang berbeda, sementara desain adaptif mungkin menyajikan tata letak berbeda berdasarkan kemampuan perangkat. Kedua pendekatan sangat penting untuk menjangkau basis pengguna yang beragam saat ini.</p>
-      
-      <h2>Mikrointeraksi Penting</h2>
-      <p>Detail kecil membuat perbedaan besar. Mikrointeraksi—seperti status hover tombol, animasi loading, dan efek transisi—memberikan umpan balik dan membuat antarmuka terasa hidup dan responsif. Sentuhan halus ini meningkatkan keterlibatan dan kepuasan pengguna.</p>
-      
-      <p>Dengan menerapkan prinsip-prinsip ini secara konsisten, Anda dapat membuat antarmuka yang tidak hanya indah tetapi juga fungsional, dapat diakses, dan ramah pengguna.</p>
+      <p>Membangun website portofolio yang efektif membutuhkan lebih dari sekadar menampilkan proyek—ini juga menuntut pemahaman tentang struktur, responsivitas, dan pengalaman pengguna. Mari kita lihat langkah-langkah inti untuk membuat website portofolio modern dengan React dan Tailwind CSS.</p>
+
+<h2>1. Menyiapkan Proyek</h2>
+<p>Mulailah dengan membuat proyek React menggunakan Vite. Proses ini cepat dan ringan, serta memberi fondasi yang solid untuk website portofolio kamu.</p>
+<pre><code>npm create vite@latest my-portfolio
+cd my-portfolio
+npm install
+npm run dev</code></pre>
+<p>Buka browser di <code>http://localhost:5173</code> untuk melihat proyek awal.</p>
+
+<h2>2. Instalasi Tailwind CSS</h2>
+<p>Tailwind CSS memudahkan styling responsif dan modern. Setelah instalasi, konfigurasikan untuk bekerja dengan React.</p>
+<pre><code>npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p</code></pre>
+<p>Edit <code>tailwind.config.js</code>:</p>
+<pre><code>content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+theme: { extend: {} },
+plugins: [],</code></pre>
+<p>Tambahkan ke <code>src/index.css</code>:</p>
+<pre><code>@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+
+<h2>3. Membuat Struktur Folder</h2>
+<p>Struktur yang jelas memudahkan pengembangan:</p>
+<pre><code>src/
+  components/
+    Navbar.jsx
+    Footer.jsx
+    ProjectCard.jsx
+  pages/
+    Home.jsx
+  App.jsx</code></pre>
+
+<h2>4. Membuat Navbar</h2>
+<pre><code>import React from "react";
+
+const Navbar = () => {
+  return (
+    &lt;nav className="p-5 bg-gray-800 text-white flex justify-between"&gt;
+      &lt;h1 className="font-bold"&gt;Portofolio&lt;/h1&gt;
+      &lt;div className="space-x-4"&gt;
+        &lt;a href="#projects"&gt;Proyek&lt;/a&gt;
+        &lt;a href="#skills"&gt;Skill&lt;/a&gt;
+        &lt;a href="#contact"&gt;Kontak&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  );
+};
+
+export default Navbar;</code></pre>
+
+<h2>5. Membuat Kartu Proyek (ProjectCard)</h2>
+<pre><code>const ProjectCard = ({ title, description, link }) => {
+  return (
+    &lt;div className="border p-4 rounded shadow hover:shadow-lg transition"&gt;
+      &lt;h2 className="font-bold text-lg"&gt;{title}&lt;/h2&gt;
+      &lt;p&gt;{description}&lt;/p&gt;
+      &lt;a href={link} target="_blank" className="text-blue-500"&gt;Lihat Proyek&lt;/a&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ProjectCard;</code></pre>
+
+<h2>6. Halaman Home</h2>
+<pre><code>import Navbar from "../components/Navbar";
+import ProjectCard from "../components/ProjectCard";
+
+const projects = [
+  { title: "Website Toko Online", description: "React + Tailwind", link: "#" },
+  { title: "Portfolio Pribadi", description: "React + Tailwind", link: "#" },
+];
+
+const Home = () => {
+  return (
+    &lt;div&gt;
+      &lt;Navbar /&gt;
+      &lt;section id="projects" className="p-10 grid grid-cols-1 md:grid-cols-2 gap-6"&gt;
+        {projects.map((p, i) =&gt; &lt;ProjectCard key={i} {...p} /&gt;)}
+      &lt;/section&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Home;</code></pre>
+
+<h2>7. Menjalankan Proyek</h2>
+<p>Setelah semua siap, jalankan proyek dan lihat hasilnya:</p>
+<pre><code>npm run dev</code></pre>
+<p>Website portofolio kamu sekarang dapat diakses di <code>http://localhost:5173</code>.</p>
+
     `,
-    image: "images/cyber.png",
-    category: "Security",
-    categoryId: "Keamanan",
+    image: "/assets/images/web.png",
+    category: "Web Development",
+    categoryId: "Pengembangan Web",
     date: "2025-11-17",
-    readTime: "5 min read",
-    readTimeId: "5 menit baca"
+    readTime: "10 min read",
+    readTimeId: "10 menit baca"
   },
   {
     id: "3",
-    slug: "typescript-best-practices",
-    title: "TypeScript Best Practices",
-    titleId: "Praktik Terbaik TypeScript",
-    excerpt: "Master TypeScript with these essential best practices and patterns for writing type-safe, maintainable code.",
-    excerptId: "Kuasai TypeScript dengan praktik terbaik dan pola penting ini untuk menulis kode yang aman secara tipe dan mudah dipelihara.",
+    slug: "Maintaining-Creativity-and-Productivity-in-the-Digital-Era",
+    title: "Maintaining Creativity and Productivity in the Digital Era",
+    titleId: "Menjaga Kreativitas dan Produktivitas di Era Digital",
+    excerpt: "Learn how to maintain creativity and productivity in the digital era with daily routines, hobbies, digital detox, learning from others, and regular reflection. Boost focus and innovation without sacrificing quality of life.",
+    excerptId: "Pelajari cara menjaga kreativitas dan produktivitas di era digital dengan strategi harian, hobi, digital detox, belajar dari orang lain, serta refleksi rutin. Tingkatkan fokus dan inovasi tanpa mengorbankan kualitas hidup.",
     content: `
-      <p>TypeScript has become the de facto standard for building large-scale JavaScript applications. Its static typing system catches errors early and improves code maintainability. Let's explore the best practices that will help you write better TypeScript code.</p>
-      
-      <h2>Embrace Strict Mode</h2>
-      <p>Always enable strict mode in your tsconfig.json. This includes strictNullChecks, strictFunctionTypes, and other strict flags that catch potential bugs at compile time. While it may seem restrictive initially, strict mode prevents countless runtime errors and makes your code more robust.</p>
-      
-      <h2>Use Type Inference Wisely</h2>
-      <p>TypeScript's type inference is powerful—use it! Don't over-annotate your code with explicit types when TypeScript can infer them correctly. However, do provide explicit types for function parameters, return types, and complex object structures to improve code readability and catch errors early.</p>
-      
-      <h2>Prefer Interfaces Over Type Aliases</h2>
-      <p>While both interfaces and type aliases can define object shapes, interfaces are generally preferred for object types. They provide better error messages, support declaration merging, and are more performant in the TypeScript compiler. Use type aliases for unions, intersections, and primitive types.</p>
-      
-      <h2>Leverage Utility Types</h2>
-      <p>TypeScript provides powerful utility types like Partial, Pick, Omit, and Record. These built-in types help you transform and manipulate types without repeating yourself. Learning to use utility types effectively can significantly reduce code duplication and improve type safety.</p>
-      
-      <h2>Avoid 'any' Type</h2>
-      <p>The 'any' type defeats the purpose of using TypeScript. Instead, use 'unknown' for values whose type you don't know yet, or create proper type definitions. If you must use 'any', add a comment explaining why and consider it a code smell that needs addressing.</p>
-      
-      <h2>Write Type Guards</h2>
-      <p>Type guards help TypeScript narrow down types in conditional blocks. Custom type guards using 'is' predicates make your code more type-safe and self-documenting. They're especially useful when working with union types or validating external data.</p>
-      
-      <p>Following these best practices will help you write TypeScript code that's not only type-safe but also maintainable and scalable. Remember, TypeScript is a tool to help you—embrace its features and let it guide you toward better code.</p>
+      <p>In today’s fast-paced digital era, maintaining both creativity and productivity is a significant challenge. Distractions from social media, notifications, and work demands make it easy to lose focus. However, with the right strategies, we can stay productive without sacrificing creativity. Here are some strategies that can help:</p>
+
+<h3>Establish a Daily Routine</h3>
+<p>Start your day by setting your main priorities. Creating a clear task list ensures that your energy is not wasted. A consistent routine helps your brain adapt, making it easier to maintain focus throughout the day.</p>
+
+<h3>Make Time for Hobbies</h3>
+<p>Creative activities outside of work, such as painting, writing, playing music, or even playing kendama, can spark new ideas and stimulate innovative thinking. Hobbies are also an effective way to relieve stress.</p>
+
+<h3>Schedule Digital Detox Time</h3>
+<p>Reduce distractions by turning off notifications or using screen time limiting apps. Taking a break from the digital world allows the brain to rest and process information more effectively.</p>
+
+<h3>Learn from Others</h3>
+<p>Follow inspiring stories from digital nomads, creators, or young entrepreneurs. Understanding their journeys provides new perspectives and motivation to continue growing.</p>
+
+<h3>Reflect and Evaluate</h3>
+<p>At the end of each week, review your achievements and plan improvements for the next week. Regular reflection allows you to track progress, correct ineffective habits, and strategize better for future tasks.</p>
+
+<p>By balancing work, leisure, and creativity, you can remain productive while maintaining a high quality of life. Creativity and productivity do not have to conflict; they can strengthen each other when managed properly.</p>
     `,
     contentId: `
-      <p>TypeScript telah menjadi standar de facto untuk membangun aplikasi JavaScript skala besar. Sistem pengetikan statisnya menangkap kesalahan lebih awal dan meningkatkan pemeliharaan kode. Mari kita jelajahi praktik terbaik yang akan membantu Anda menulis kode TypeScript yang lebih baik.</p>
-      
-      <h2>Rangkul Mode Ketat</h2>
-      <p>Selalu aktifkan mode ketat di tsconfig.json Anda. Ini termasuk strictNullChecks, strictFunctionTypes, dan flag ketat lainnya yang menangkap bug potensial saat kompilasi. Meskipun mungkin tampak membatasi pada awalnya, mode ketat mencegah kesalahan runtime yang tak terhitung jumlahnya dan membuat kode Anda lebih kuat.</p>
-      
-      <h2>Gunakan Inferensi Tipe dengan Bijak</h2>
-      <p>Inferensi tipe TypeScript sangat kuat—gunakanlah! Jangan terlalu banyak memberi anotasi pada kode Anda dengan tipe eksplisit ketika TypeScript dapat menyimpulkannya dengan benar. Namun, berikan tipe eksplisit untuk parameter fungsi, tipe pengembalian, dan struktur objek kompleks untuk meningkatkan keterbacaan kode dan menangkap kesalahan lebih awal.</p>
-      
-      <h2>Lebih Suka Interface daripada Type Alias</h2>
-      <p>Meskipun interface dan type alias dapat mendefinisikan bentuk objek, interface umumnya lebih disukai untuk tipe objek. Mereka memberikan pesan kesalahan yang lebih baik, mendukung penggabungan deklarasi, dan lebih berkinerja dalam kompiler TypeScript. Gunakan type alias untuk union, intersection, dan tipe primitif.</p>
-      
-      <h2>Manfaatkan Utility Types</h2>
-      <p>TypeScript menyediakan utility types yang kuat seperti Partial, Pick, Omit, dan Record. Tipe bawaan ini membantu Anda mengubah dan memanipulasi tipe tanpa mengulang diri sendiri. Belajar menggunakan utility types secara efektif dapat secara signifikan mengurangi duplikasi kode dan meningkatkan keamanan tipe.</p>
-      
-      <h2>Hindari Tipe 'any'</h2>
-      <p>Tipe 'any' mengalahkan tujuan menggunakan TypeScript. Sebagai gantinya, gunakan 'unknown' untuk nilai yang tipenya belum Anda ketahui, atau buat definisi tipe yang tepat. Jika Anda harus menggunakan 'any', tambahkan komentar yang menjelaskan mengapa dan anggap itu sebagai code smell yang perlu ditangani.</p>
-      
-      <h2>Tulis Type Guards</h2>
-      <p>Type guards membantu TypeScript mempersempit tipe dalam blok kondisional. Type guards kustom menggunakan predikat 'is' membuat kode Anda lebih aman secara tipe dan self-documenting. Mereka sangat berguna saat bekerja dengan union types atau memvalidasi data eksternal.</p>
-      
-      <p>Mengikuti praktik terbaik ini akan membantu Anda menulis kode TypeScript yang tidak hanya aman secara tipe tetapi juga dapat dipelihara dan dapat diskalakan. Ingat, TypeScript adalah alat untuk membantu Anda—rangkul fitur-fiturnya dan biarkan ia membimbing Anda menuju kode yang lebih baik.</p>
+      <p>Di era digital yang serba cepat, menjaga kreativitas sekaligus produktivitas menjadi tantangan tersendiri. Banyak distraksi dari media sosial, notifikasi, hingga tuntutan pekerjaan membuat fokus mudah hilang. Namun, dengan strategi yang tepat, kita bisa tetap produktif tanpa mengorbankan kreativitas. Berikut beberapa strategi yang bisa membantu:</p>
+
+<h3>Tetapkan Rutinitas Harian</h3>
+<p>Mulailah hari dengan menetapkan prioritas utama. Buat daftar tugas yang jelas agar energi tidak terbuang sia-sia. Rutinitas yang konsisten membantu otak beradaptasi sehingga fokus lebih mudah dipertahankan.</p>
+
+<h3>Berikan Waktu untuk Hobi</h3>
+<p>Aktivitas kreatif di luar pekerjaan, seperti melukis, menulis, bermain musik, atau bahkan bermain kendama, dapat meningkatkan ide-ide baru dan merangsang pola pikir inovatif. Hobi juga menjadi cara efektif untuk melepaskan stres.</p>
+
+<h3>Jadwalkan Waktu Digital Detox</h3>
+<p>Kurangi distraksi dengan mematikan notifikasi atau menggunakan aplikasi pembatas waktu layar. Memberikan jeda dari dunia digital membantu otak beristirahat dan memproses informasi lebih efektif.</p>
+
+<h3>Belajar dari Orang Lain</h3>
+<p>Ikuti kisah inspiratif dari digital nomad, kreator, atau pengusaha muda. Memahami perjalanan mereka memberikan perspektif baru dan motivasi untuk terus berkembang.</p>
+
+<h3>Evaluasi dan Refleksi</h3>
+<p>Setiap akhir minggu, tinjau pencapaian dan rencanakan perbaikan untuk minggu berikutnya. Dengan refleksi rutin, kita bisa melihat progres, memperbaiki kebiasaan yang kurang efektif, dan merencanakan strategi yang lebih baik.</p>
+
+<p>Dengan menjaga keseimbangan antara pekerjaan, hiburan, dan kreativitas, kita bisa tetap produktif sekaligus menjaga kualitas hidup. Kreativitas dan produktivitas tidak harus saling bertentangan, malah keduanya bisa saling memperkuat jika dikelola dengan tepat.</p>
     `,
-    image: "/images/TypeScript.jpg",
-    category: "Development",
-    categoryId: "Pengembangan",
-    date: "2024-01-05",
+    image: "/assets/images/cof.png",
+    category: "Self Improvement",
+    categoryId: "Pengembangan Diri",
+    date: "2025-11-18",
     readTime: "6 min read",
     readTimeId: "6 menit baca"
   }

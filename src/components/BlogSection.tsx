@@ -5,7 +5,6 @@ import { Calendar, Clock, ArrowRight, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '@/data/blogData';
 
-
 interface BlogSectionProps {
   language: 'en' | 'id';
 }
