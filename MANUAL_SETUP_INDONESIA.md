@@ -544,7 +544,7 @@ VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
 VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
 
 # WhatsApp Configuration
-VITE_WHATSAPP_NUMBER=6281234567890
+VITE_WHATSAPP_NUMBER=6285156796373
 
 # YouTube Video ID (untuk video perkenalan)
 VITE_YOUTUBE_VIDEO_ID=dQw4w9WgXcQ
@@ -1341,7 +1341,7 @@ Untuk deploy website ke Netlify, ikuti panduan lengkap di file **DEPLOYMENT.md**
 
 **Nomor WhatsApp:**
 - Edit file `.env`
-- Ubah `VITE_WHATSAPP_NUMBER=6281234567890` dengan nomor WhatsApp Anda
+- Ubah `VITE_WHATSAPP_NUMBER=6285156796373` dengan nomor WhatsApp Anda
 
 **Link Social Media:**
 - Edit `src/components/SocialMedia.tsx`
