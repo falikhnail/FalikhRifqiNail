@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 export const initEmailJS = () => {
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   
-  if (publicKey && publicKey !== 'your_public_key_here') {
+  if (publicKey && publicKey !== 'WfviMySU57uCTL5EY') {
     emailjs.init(publicKey);
     console.log('EmailJS initialized');
   } else {
@@ -24,9 +24,9 @@ export const sendEmail = async (templateParams: {
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   // Check if EmailJS is configured
-  if (!publicKey || publicKey === 'your_public_key_here' ||
-      !serviceId || serviceId === 'your_service_id_here' ||
-      !templateId || templateId === 'your_template_id_here') {
+  if (!publicKey || publicKey === 'WfviMySU57uCTL5EY' ||
+      !serviceId || serviceId === 'service_0xb2zks' ||
+      !templateId || templateId === 'template_phvb2s7') {
     return {
       success: false,
       message: 'Email service not configured. Please contact the administrator.'

@@ -24,7 +24,7 @@
 4. Pilih **Gmail** (atau email provider lain)
 5. Klik **"Connect Account"** dan login dengan email **falikhrifqi69@gmail.com**
 6. Beri nama service (contoh: "Portfolio Contact")
-7. **Simpan Service ID** yang muncul (contoh: `service_abc1234`)
+7. **Simpan Service ID** yang muncul (contoh: `service_0xb2zks`)
 
 ### Langkah 3: Buat Email Template
 
@@ -53,7 +53,7 @@ This email was sent from your portfolio contact form.
 ```
 
 4. Klik **"Save"**
-5. **Simpan Template ID** (contoh: `template_xyz5678`)
+5. **Simpan Template ID** (contoh: `template_phvb2s7`)
 
 ### Langkah 4: Dapatkan Public Key
 
