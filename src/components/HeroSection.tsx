@@ -56,8 +56,13 @@ export default function HeroSection({ language }: HeroSectionProps) {
             <div className="lg:hidden flex justify-center mb-8">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                {/* 
+                  === PERUBAHAN DIBUAT DI SINI ===
+                  src telah diubah dari '/assets/profile.jpg' menjadi '/assets/falikh.webp'
+                  untuk mencocokkan gambar yang digunakan di versi desktop.
+                */}
                 <img
-                  src="/assets/profile.jpg"
+                  src="/assets/falikh.webp"
                   alt="Falikh Rifqi Nail"
                   className="relative w-48 h-48 rounded-full border-4 border-white dark:border-slate-800 shadow-2xl object-cover"
                 />
@@ -109,7 +114,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
                 <img
-                  src="assets/falikh.png"
+                  src="/assets/falikh.webp"
                   alt="Falikh Rifqi Nail"
                   className="relative w-64 h-64 rounded-full border-4 border-white dark:border-slate-800 shadow-2xl object-cover"
                 />
