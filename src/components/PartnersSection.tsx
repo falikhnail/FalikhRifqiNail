@@ -53,7 +53,7 @@ export default function PartnersSection({ language }: PartnersSectionProps) {
       name: 'Nusadroids Production',
       type: 'Startup Partners & Clients',
       typeId: 'Mitra & Klien Startup',
-      image: '/assets/partners/nusadev.jpg',
+      image: '/assets/partners/nusadevv.jpg',
       description: 'Innovative startup accelerator',
       descriptionId: 'Akselerator startup inovatif',
       icon: 'briefcase',
@@ -75,6 +75,15 @@ export default function PartnersSection({ language }: PartnersSectionProps) {
       description: 'Companies and Internal Institutions',
       descriptionId: 'Perusahaan dan Institusi Internal',
       icon: 'building',
+    },
+    {
+      name: 'Khesa Alvandi Sembodo',
+      type: 'Freelance Partner',
+      typeId: 'Mitra Freelancer',
+      image: '/assets/partners/KhesaR.jpg',
+      description: 'Independent Professional & Project-based Worker',
+      descriptionId: 'Profesional Independen & Pekerja Berbasis Proyek',
+      icon: 'users'
     },
   ];
 

@@ -40,6 +40,15 @@ export default function TestimonialsSection({ language }: TestimonialsSectionPro
       contentId: 'Ia selalu dapat diandalkan saat proyek harus diselesaikan tepat waktu. Pekerjaannya detail, rapi, dan selalu memuaskan.',
       rating: 5,
     },
+    {
+      name: 'Khesa Alvandi Sembodo',
+      role: 'As a freelancer',
+      company: 'Freelancer',
+      image: '/assets/partners/Khesa.jpg',
+      content: 'He consistently delivers high-quality work with professionalism and precision. He adapts quickly to project needs, communicates clearly, and always completes tasks on time. His dedication and attention to detail make him a valuable collaborator.',
+      contentId: 'Ia selalu memberikan hasil pekerjaan yang berkualitas dengan profesionalisme dan ketelitian. Ia cepat beradaptasi dengan kebutuhan proyek, berkomunikasi dengan jelas, dan selalu menyelesaikan tugas tepat waktu. Dedikasi serta perhatian terhadap detail membuatnya menjadi rekan kerja yang sangat berharga.',
+      rating: 5,
+    },
   ];
 
   return (
