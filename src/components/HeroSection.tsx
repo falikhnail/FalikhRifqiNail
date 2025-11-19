@@ -20,7 +20,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
     id: {
       greeting: 'Hai, Saya',
       name: 'Falikh Rifqi Nail',
-      title: 'Web Developer & IT Specialist',
+      title: 'Pengembang Web & Ahli TI',
       description: 'Saya membangun website yang cepat, aman, dan modern menggunakan Laravel, CodeIgniter, dan React. Berpengalaman dalam pengembangan sistem, manajemen infrastruktur IT, dan solusi teknologi untuk bisnis',
       cta: 'Lihat Karya Saya',
       downloadCV: 'Unduh CV',
