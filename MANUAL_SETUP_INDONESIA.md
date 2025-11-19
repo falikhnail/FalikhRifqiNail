@@ -1636,13 +1636,6 @@ Proyek ini adalah template open-source. Anda bebas menggunakan, memodifikasi, da
 
 ---
 
-## 🙏 CREDITS
-
-**Dibuat oleh:** Alex (Engineer)  
-**Platform:** MetaGPTX (MGX)  
-**Tanggal:** November 2024  
-**Tech Stack:** React + TypeScript + Vite + Tailwind CSS + Shadcn-ui
-
 **Special Thanks:**
 - Shadcn-ui untuk component library yang amazing
 - Tailwind CSS untuk utility-first CSS framework
