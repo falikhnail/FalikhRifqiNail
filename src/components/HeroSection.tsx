@@ -32,7 +32,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = 'assets/cv.pdf';
+    link.href = '/assets/cv.pdf';
     link.download = 'CV-FALIKH-RIFQI-NAIL.pdf';
     document.body.appendChild(link);
     link.click();
@@ -109,7 +109,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
                 <img
-                  src="/assets/falikh.png"
+                  src="assets/falikh.png"
                   alt="Falikh Rifqi Nail"
                   className="relative w-64 h-64 rounded-full border-4 border-white dark:border-slate-800 shadow-2xl object-cover"
                 />

@@ -53,7 +53,7 @@ export default function PartnersSection({ language }: PartnersSectionProps) {
       name: 'Nusadroids Production',
       type: 'Startup Partners & Clients',
       typeId: 'Mitra & Klien Startup',
-      image: '/assets/partners/partner2.jpg',
+      image: '/assets/partners/nusadev.jpg',
       description: 'Innovative startup accelerator',
       descriptionId: 'Akselerator startup inovatif',
       icon: 'briefcase',
