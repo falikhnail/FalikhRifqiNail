@@ -611,27 +611,26 @@ dist-ssr
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
   
   <!-- Primary Meta Tags -->
-  <title>Falikh Rifqi Nail - Full-Stack Developer & UI/UX Designer</title>
-  <meta name="title" content="Falikh Rifqi Nail - Full-Stack Developer & UI/UX Designer" />
-  <meta name="description" content="Professional portfolio of Falikh Rifqi Nail - Full-Stack Developer and UI/UX Designer specializing in modern web technologies, React, Node.js, and innovative digital solutions." />
-  <meta name="keywords" content="Falikh Rifqi Nail, Full-Stack Developer, UI/UX Designer, React Developer, Web Development, Portfolio, JavaScript, TypeScript, Node.js" />
+  <title>Falikh Rifqi Nail -  Web Developer & IT Specialist</title>
+  <meta name="title" content="Falikh Rifqi Nail - Web Developer & IT Specialist" />
+  <meta name="description" content="Professional portfolio of Falikh Rifqi Nail - Web Developer & IT Specialist specializing in modern web technologies, React, Node.js, and innovative digital solutions." />
+  <meta name="keywords" content="Falikh Rifqi Nail, Web Developer & IT Specialist, React Developer, Web Development, Portfolio, JavaScript, TypeScript, Node.js" />
   <meta name="author" content="Falikh Rifqi Nail" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://falikhrifqi.com/" />
-  <meta property="og:title" content="Falikh Rifqi Nail - Full-Stack Developer & UI/UX Designer" />
+  <meta property="og:title" content="Falikh Rifqi Nail - Web Developer & IT Specialist" />
   <meta property="og:description" content="Professional portfolio showcasing web development projects, UI/UX designs, and technical expertise in modern web technologies." />
   <meta property="og:image" content="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://falikhrifqi.com/" />
-  <meta property="twitter:title" content="Falikh Rifqi Nail - Full-Stack Developer & UI/UX Designer" />
+  <meta property="twitter:title" content="Falikh Rifqi Nail - Web Developer & IT Specialist" />
   <meta property="twitter:description" content="Professional portfolio showcasing web development projects, UI/UX designs, and technical expertise in modern web technologies." />
   <meta property="twitter:image" content="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" />
 
@@ -1332,7 +1331,7 @@ Untuk deploy website ke Netlify, ikuti panduan lengkap di file **DEPLOYMENT.md**
 **Nama dan Judul:**
 - Edit `src/components/HeroSection.tsx`
 - Cari `name: 'Falikh Rifqi Nail'` dan ganti dengan nama Anda
-- Cari `title: 'Full-Stack Developer & UI/UX Designer'` dan ganti dengan judul Anda
+- Cari `title: 'Web Developer & IT Specialist'` dan ganti dengan judul Anda
 
 **Email:**
 - Edit `src/components/ContactSection.tsx`
