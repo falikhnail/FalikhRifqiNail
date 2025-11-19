@@ -5,13 +5,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Index from './pages/Index';
 import BlogDetail from './pages/BlogDetail';
 import NotFound from './pages/NotFound';
-import { usePageTracking } from './lib/analytics';
+import { usePageTracking, initGA } from './lib/analytics';
 import { initEmailJS } from './lib/emailjs';
 
 const queryClient = new QueryClient();
 
 // Initialize services
 initEmailJS();
+initGA();
 
 const AppWithTracking = () => {
   usePageTracking();

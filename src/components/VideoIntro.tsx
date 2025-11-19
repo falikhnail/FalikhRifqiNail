@@ -22,7 +22,7 @@ export default function VideoIntro({ language }: VideoIntroProps) {
   const t = texts[language];
 
   // Get YouTube video ID from environment variables
-  const youtubeVideoId = import.meta.env.VITE_YOUTUBE_VIDEO_ID || 'dQw4w9WgXcQ';
+  const youtubeVideoId = import.meta.env.VITE_YOUTUBE_VIDEO_ID || 'uYda5UuU9G8';
 
   return (
     <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-400 dark:border-purple-600 group">
