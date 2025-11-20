@@ -32,7 +32,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/assets/cv.pdf';
+    link.href = '/assets/Falikh-Rifqi-Nail.pdf';
     link.download = 'CV-FALIKH-RIFQI-NAIL.pdf';
     document.body.appendChild(link);
     link.click();
