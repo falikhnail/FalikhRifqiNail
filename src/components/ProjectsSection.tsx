@@ -1,7 +1,7 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface ProjectsSectionProps {
   language: 'en' | 'id';
@@ -13,13 +13,11 @@ export default function ProjectsSection({ language }: ProjectsSectionProps) {
       heading: 'Featured Projects',
       subheading: 'Some of my recent work',
       viewLive: 'View Live',
-      viewCode: 'View Code',
     },
     id: {
       heading: 'Proyek Unggulan',
       subheading: 'Beberapa karya terbaru saya',
       viewLive: 'Lihat Live',
-      viewCode: 'Lihat Kode',
     },
   };
 
@@ -28,58 +26,53 @@ export default function ProjectsSection({ language }: ProjectsSectionProps) {
   const projects = [
     {
       title: language === 'en' ? 'Master Music Management System' : 'Sistem Master Music Managemen',
-      description: language === 'en' 
+      description: language === 'en'
         ? 'Platform for managing artists, events, and music catalogs with a clean and modern dashboard interface.'
-        : 'Platform untuk mengelola artis, event, dan katalog musik dengan tampilan dashboard yang modern dan mudah digunakan.',
+        : 'Platform untuk mengelola artis, event, dan katalog musik dengan dashboard modern dan mudah digunakan.',
       image: '/assets/projects/mastermusic.webp',
       tags: ['Laravel', 'PHP', 'Cpanel', 'JavaScript'],
       liveUrl: 'https://mastermusic.co.id/',
-      githubUrl: '#',
     },
     {
       title: language === 'en' ? 'SIMAS INTEL System' : 'Sistem SIMAS INTEL',
       description: language === 'en'
         ? 'Platform for internal data management and monitoring with a modern, responsive interface delivering fast and accessible information.'
-        : 'Platform untuk manajemen dan monitoring data internal dengan antarmuka modern, responsif, cepat, serta mudah diakses pengguna.',
+        : 'Platform untuk manajemen internal dan monitoring data dengan tampilan modern, cepat & responsif.',
       image: '/assets/projects/keja.webp',
       tags: ['Next.js', 'TypeScript', 'Cpanel', 'CSS', 'JavaScript'],
       liveUrl: 'https://simas-intel.knkudus.com/',
-      githubUrl: '#',
     },
     {
-      title: language === 'en' ? 'Portfolio & Online Registration' : 'Portofolio & Online Registration',
+      title: language === 'en' ? 'Portfolio & Online Registration' : 'Portofolio & Pendaftaran Online',
       description: language === 'en'
-        ? 'The official hospital site showcasing services, doctors, facilities, profiles, and fast, efficient online patient registration.'
-        : 'Situs resmi RSIA yang menampilkan layanan, dokter, fasilitas, profil, dan pendaftaran pasien online cepat efisien.',
+        ? 'Official hospital site showcasing services, doctors, facilities & fast online registration.'
+        : 'Situs resmi rumah sakit dengan layanan, dokter, fasilitas & pendaftaran pasien online.',
       image: '/assets/projects/mir.webp',
-      tags: ['Laravel', 'Blade', 'Cpanel', 'CSS','JavaScript'],
+      tags: ['Laravel', 'Blade', 'Cpanel', 'CSS', 'JavaScript'],
       liveUrl: 'https://rsiamiriam.com/',
-      githubUrl: 'https://github.com/falikhnail/miriam-web',
     },
     {
       title: language === 'en' ? 'Miriam Attendance' : 'Miriam Presensi',
       description: language === 'en'
-        ? 'Real-time employee attendance system offering verification, auto logs, and daily activity tracking for improved workplace efficiency.'
-        : 'Sistem absensi karyawan real-time dengan verifikasi, rekapan otomatis, dan pemantauan aktivitas harian agar operasional lebih efisien.',
+        ? 'Real-time employee attendance system with smart automatic logs and activity tracking.'
+        : 'Sistem absensi karyawan real-time dengan rekapan otomatis & pemantauan aktivitas.',
       image: '/assets/projects/presensi.webp',
       tags: ['Laravel', 'Blade', 'Cpanel', 'CSS', 'JavaScript'],
       liveUrl: 'https://e-presensi.rsiamiriam.com/',
-      githubUrl: '#',
     },
     {
       title: language === 'en' ? 'Digital Wedding Invitation' : 'Undangan Digital',
       description: language === 'en'
-        ? 'Interactive, modern online wedding site, easy to share with guests, including event details and RSVP.'
-        : 'Website pernikahan online interaktif, modern, mudah dibagikan, menampilkan detail acara, tamu, dan RSVP',
+        ? 'Interactive online wedding site with modern UI and RSVP features.'
+        : 'Website pernikahan interaktif, modern, dan dilengkapi RSVP.',
       image: '/assets/projects/Weding.webp',
-      tags: ['Java Script', 'API', 'HTML', 'Vercel', 'CSS'],
+      tags: ['JavaScript', 'API', 'HTML', 'Vercel', 'CSS'],
       liveUrl: 'https://undangan-pernikahan-falikh-ghina.vercel.app/',
-      githubUrl: 'https://github.com/falikhnail/undangan-digital-with-RestFullApi',
     },
   ];
 
   return (
-    <section 
+    <section
       className="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 transition-colors duration-300"
       aria-labelledby="projects-heading"
     >
@@ -134,25 +127,15 @@ export default function ProjectsSection({ language }: ProjectsSectionProps) {
                 </div>
               </CardContent>
 
-              <CardFooter className="p-6 pt-0 flex gap-3">
+              <CardFooter className="p-6 pt-0">
                 <Button
                   variant="default"
-                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                   asChild
                 >
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     {t.viewLive}
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  className="flex-1 border-2 border-purple-600 text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20"
-                  asChild
-                >
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="w-4 h-4 mr-2" />
-                    {t.viewCode}
                   </a>
                 </Button>
               </CardFooter>
