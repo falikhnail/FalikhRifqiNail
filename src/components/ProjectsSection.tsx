@@ -69,6 +69,15 @@ export default function ProjectsSection({ language }: ProjectsSectionProps) {
       tags: ['JavaScript', 'API', 'HTML', 'Vercel', 'CSS'],
       liveUrl: 'https://undangan-pernikahan-falikh-ghina.vercel.app/',
     },
+    {
+      title: language === 'en' ? 'Pharmacy POS System' : 'POS Manajemen Apotek-',
+      description: language === 'en'
+        ? 'Pharmacy POS for sales and inventory control.'
+        : 'Sistem POS apotek untuk penjualan dan manajemen stok obat.',
+      image: '/assets/projects/posapotik.webp',
+      tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+      liveUrl: 'https://demo-pos-apotik.netlify.app/',
+    },
   ];
 
   return (
