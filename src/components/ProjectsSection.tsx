@@ -76,7 +76,7 @@ export default function ProjectsSection({ language }: ProjectsSectionProps) {
         : 'Sistem POS apotek untuk penjualan dan manajemen stok obat.',
       image: '/assets/projects/posapotik.webp',
       tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-      liveUrl: 'https://demo-pos-apotik.netlify.app/',
+      liveUrl: 'https://pharmacy-management-system-brown.vercel.app/',
     },
   ];
 
