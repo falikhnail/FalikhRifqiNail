@@ -78,6 +78,60 @@ export default function ProjectsSection({ language }: ProjectsSectionProps) {
       tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
       liveUrl: 'https://pharmacy-management-system-brown.vercel.app/',
     },
+    {
+      title: language === 'en' ? 'Undangan Digital JPM' : 'JPM Digital Invitation’',
+      description: language === 'en'
+        ? 'invitation to a modern digital grand opening with an elegant design and interactive features.'
+        : 'Undangan pernikahan digital modern dengan desain elegan dan fitur interaktif.',
+      image: '/assets/projects/jpm.png',
+      tags: ['TypeScript', 'Tailwind CSS'],
+      liveUrl: 'https://jpm-mebel-invitation.vercel.app/',
+    },
+    {
+      title: language === 'en' ? 'Tempat Penjualan Dimsuk Mpok Rani' : 'Point of Sale Dimsuk Mpok Rani',
+      description: language === 'en'
+        ? 'A web-based Point of Sale (POS) application for product management, transactions, and sales reports for MSMEs.'
+        : 'Aplikasi Point of Sale (POS) berbasis web untuk manajemen produk, transaksi, dan laporan penjualan UMKM.',
+      image: '/assets/projects/mpkrani.png',
+      tags: ['TypeScript', 'Tailwind CSS', 'PostgreSQL'],
+      liveUrl: 'https://dimsum-boss-suite.vercel.app/',
+    },
+    {
+      title: language === 'en' ? 'Sistem Kasir & Manajemen Toko Vape Store' : 'Vape Store Cashier & Management System',
+      description: language === 'en'
+        ? 'Designed to help retail businesses easily manage sales, inventory, purchasing, and financial reports.'
+        : 'Dirancang untuk membantu bisnis retail mengelola penjualan, inventaris, pembelian, dan laporan keuangan dengan mudah.',
+      image: '/assets/projects/cloud.png',
+      tags: ['React', 'TypeScript', 'Tailwind', 'CSS', 'Supabase'],
+      liveUrl: 'https://cloud-shop-manager.vercel.app/',
+    },
+    {
+      title: language === 'en' ? 'FurniPrice - Sistem Kalkulasi Harga Furniture' : 'FurniPrice - Furniture Price Calculation System',
+      description: language === 'en'
+        ? 'This system helps calculate the selling price by considering various factors such as base price, profit margin, discounts, and regional prices.'
+        : 'Sistem ini membantu menghitung harga jual dengan mempertimbangkan berbagai faktor seperti harga dasar, margin keuntungan, diskon, dan harga regional.',
+      image: '/assets/projects/furniprice.png',
+      tags: ['React', 'TypeScript', 'Tailwind', 'postgreSQL'],
+      liveUrl: 'https://sales-champion.vercel.app/',
+    },
+    {
+      title: language === 'en' ? 'TaskMaster - Todo App PWA' : 'TaskMaster - Todo App PWA',
+      description: language === 'en'
+        ? 'A modern task management application that can be installed as a Progressive Web App (PWA) with reminder, statistics, and notification features.'
+        : 'Aplikasi manajemen tugas modern yang dapat diinstall sebagai Progressive Web App (PWA) dengan fitur reminder, statistik, dan notifikasi.',
+      image: '/assets/projects/taskflow.png',
+      tags: ['React', 'TypeScript', 'CSS', 'postgreSQL'],
+      liveUrl: 'https://todolist-with-desain-girl.vercel.app/',
+    },
+        {
+      title: language === 'en' ? 'Aplikasi web POS untuk penjualan dan laporan bisnis mebel.' : 'Web-based POS application for furniture sales and business reporting.',
+      description: language === 'en'
+        ? 'A web-based POS application that handles inventory management, point of sale transactions, and sales reports, developed using modern web technology and deployed through Vercel.'
+        : 'Aplikasi POS berbasis web yang menangani manajemen inventory, transaksi point of sale, dan laporan penjualan, dikembangkan menggunakan teknologi web modern dan di-deploy melalui Vercel.',
+      image: '/assets/projects/mebel.png',
+      tags: ['React', 'TypeScript', 'Tailwind CSS', 'postgreSQL', 'Vite','shadcn-ui'],
+      liveUrl: 'https://demo-pos-mebel.vercel.app/',
+    },
   ];
 
   return (
