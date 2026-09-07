@@ -32,8 +32,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/assets/Falikh-Rifqi-Nail.pdf';
-    link.download = 'CV-FALIKH-RIFQI-NAIL.pdf';
+    link.href = '/assets/CV-FALIKH-RIFQI-NAIL-IT.pdf';
+    link.download = 'CV-FALIKH-RIFQI-NAIL-IT.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
